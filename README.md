@@ -79,7 +79,7 @@ python gen-heatmap.py
 
 ## Results
 
-|  Model     |Weight Link |  size (pixels)  |  #Para(M)  |  Tra.Time (h)  |  Inf.Time (ms)  |  AP50 (%)  |  AP75 (%)  |  mAP (%)  |
+|  Model     |Weight Link |  Img size (pixels)  |  #Para(M)  |  Tra.Time (h)  |  Inf.Time (ms)  |  AP50 (%)  |  AP75 (%)  |  mAP (%)  |
 | :---:      | :---: | :---:| :---: | :---: | :---: | :---: | :---: | :---: |
 |  CFT       |[Download](https://pan.baidu.com/s/1KjlbzaW_KcsyKyQ7ziUwDg?pwd=0601)    |  512 x 512  |  53.8  |  60.6  |  40.6    |  84.6   |  68.9   |  59.9    |
 |  CLANet    |[Download](https://pan.baidu.com/s/1xq7p5ujbRh86WaoxVnEIag?pwd=0601)    |  512 x 512  |  48.2  |  56.2  |  29.1    |  84.6   |  68.5   |  59.6    |
