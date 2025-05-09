@@ -25,15 +25,16 @@
 ## Dataset and Label Structure
 ![image](https://github.com/wchao0601/M4-SAR/blob/master/img/m4-sar-structure.png)
 
-See [Segmentation Docs](https://docs.ultralytics.com/tasks/segment/) for usage examples with these models trained on [COCO-Seg](https://docs.ultralytics.com/datasets/segment/coco/), which include 80 pre-trained classes.
 
-| Model                                                                                        | size<br><sup>(pixels) | mAP<sup>box<br>50-95 | mAP<sup>mask<br>50-95 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>T4 TensorRT10<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
+| Model   | size (pixels) | #P(M) | Tra.T (h) | Inf.T (ms) | AP50 | AP75 | mAP |
 | -------------------------------------------------------------------------------------------- | --------------------- | -------------------- | --------------------- | ------------------------------ | ----------------------------------- | ------------------ | ----------------- |
-| [YOLO11n-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt) | 640                   | 38.9                 | 32.0                  | 65.9 ± 1.1                     | 1.8 ± 0.0                           | 2.9                | 10.4              |
-| [YOLO11s-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-seg.pt) | 640                   | 46.6                 | 37.8                  | 117.6 ± 4.9                    | 2.9 ± 0.0                           | 10.1               | 35.5              |
-| [YOLO11m-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-seg.pt) | 640                   | 51.5                 | 41.5                  | 281.6 ± 1.2                    | 6.3 ± 0.1                           | 22.4               | 123.3             |
-| [YOLO11l-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-seg.pt) | 640                   | 53.4                 | 42.9                  | 344.2 ± 3.2                    | 7.8 ± 0.2                           | 27.6               | 142.2             |
-| [YOLO11x-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-seg.pt) | 640                   | 54.7                 | 43.8                  | 664.5 ± 3.2                    | 15.8 ± 0.7                          | 62.1               | 319.0             |
+| [CFT](https://github.com/DocF/multispectral-object-detection) | 512 x 512       | 53.8     | 32.0       | 40.6   | 84.6  | 68.9  | 59.9   |
+| [CLANet](https://github.com/hexiao0275/CALNet-Dronevehicle)   | 512 x 512       | 48.2     | 37.8       | 29.1   | 84.6  | 68.5  | 59.6   |
+| [CSSA](https://github.com/artrela/mulitmodal-cssa)            | 512 x 512       | 13.5     | 41.5       | 12.3   | 83.4  | 66.4  | 58.0   |
+| [CMADet](https://github.com/VDT-2048/DVTOD)                   | 512 x 512       | 41.5     | 42.9       | 46.7   | 81.5  | 63.5  | 55.7   |
+| [ICAFusion](https://github.com/chanchanchan97/ICAFusion)      | 512 x 512       | 29.0     | 43.8       | 23.6   | 84.5  | 67.3  | 58.8   |
+| [MMIDet](https://github.com/joewybean/MMI-Det)                | 512 x 512       | 53.8     | 43.8       | 41.9   | 84.8  | 68.6  | 59.8   |
+| [E2E-OSDet](https://github.com/wchao0601/M4-SAR)              | 512 x 512       | 27.5     | 43.8       | 20.9   | 85.7  | 70.3  | 61.4   |
 
 
 
