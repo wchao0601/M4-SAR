@@ -46,6 +46,36 @@ pip install -r requirements.txt
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/m4-sar-structure.png" width="90%"> </p>
 
 
+### Single-GPU Train
+```
+python train.py
+```
+
+### Multi-GPU Train
+```
+python multigpu-train.py
+```
+
+### Test
+```
+python test.py
+```
+
+### Gen-Predict
+```
+python gen-predict-label.py
+```
+
+### Vis-Predict
+```
+python vis-predict-label.py
+```
+
+### Gen-Heatmap
+```
+python gen-heatmap.py
+```
+
 ## Results
 
 | **Model**   | **size (pixels)** | **#P(M)** | **Tra.T (h)** | **Inf.T (ms)** | **AP50 (%)** | **AP75 (%)** | **mAP (%)** |
