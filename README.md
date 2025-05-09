@@ -16,14 +16,37 @@
 ## **Architectural details of the proposed FAM, CMIM, and AFM modules.**
 ![image](https://github.com/wchao0601/M4-SAR/blob/master/img/FAM-CMIM-AFM.png)
 
-## M4-SAR Dataset
+
+## Usage
+### Installation
+Create and activate a conda environment:
+```
+conda create -n e2e-osdet python=3.11
+conda activate e2e-osdet
+```
+Install the required packages:
+```
+git clone https://github.com/xxx/M4-SAR.git
+cd M4-SAR/
+pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
+pip install seaborn thop timm einops
+cd STTrack/mamba_install/causal-conv1d
+CAUSAL_CONV1D_FORCE_BUILD=TRUE pip install .
+cd ../selective_scan
+pip install .
+cd ../M4-SAR 
+pip install -r requirements.txt
+```
+
+### Data Preparation
 | Dataset | Download Link | Code |
 | --- | --- | --- |
 | MS-SAR | [Download](https://kaggle.com/datasets/a8ca500cbad658d8ae1af3d1f84566a5b4e94fe0ddb0be801c9e2f672db36a57)| 0601 |
 
-
-## Dataset and Label Structure
+### Dataset and Label Structure
 ![image](https://github.com/wchao0601/M4-SAR/blob/master/img/m4-sar-structure.png)
+
+
 
 
 | Model   | size (pixels) | #P(M) | Tra.T (h) | Inf.T (ms) | AP50 | AP75 | mAP |
