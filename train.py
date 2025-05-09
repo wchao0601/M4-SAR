@@ -6,7 +6,10 @@ def main():
     model = YOLO(cfg)
     project = 'runs/train/M4-SAR/'
     name = 'yolo11-obb-E2E-OSDet-300e'
-    model.train(data=data, epochs=300, batch=64, imgsz=512, name=name, resume=False, device=[0,1], project=project) # resume train setting 'resume=True' and 'cfg = 'runs/train/M4-SAR/yolo11-obb-E2E-OSDet-300e/weights/last.pt''
+    model.train(data=data, epochs=300, batch=64, imgsz=512, name=name, resume=False, device=[0,1], project=project) 
+    # Single-GPU training: device=0
+    # Single-GPU training: device=[0,1]'
+    # resume train setting 'resume=True' and 'cfg = 'runs/train/M4-SAR/yolo11-obb-E2E-OSDet-300e/weights/last.pt''
 
 if __name__ == '__main__':
     main()
