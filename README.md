@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 
 
-| Model   | size (pixels) | #P(M) | Tra.T (h) | Inf.T (ms) | AP50 | AP75 | mAP |
+| Model   | size (pixels) | #P(M) | Tra.T (h) | Inf.T (ms) | AP50 (%) | AP75 (%) | mAP (%) |
 | -------------------------------------------------------------------------------------------- | --------------------- | -------------------- | --------------------- | ------------------------------ | ----------------------------------- | ------------------ | ----------------- |
 | [CFT](https://github.com/DocF/multispectral-object-detection) | 512 x 512       | 53.8     | 32.0       | 40.6   | 84.6  | 68.9  | 59.9   |
 | [CLANet](https://github.com/hexiao0275/CALNet-Dronevehicle)   | 512 x 512       | 48.2     | 37.8       | 29.1   | 84.6  | 68.5  | 59.6   |
