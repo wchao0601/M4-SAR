@@ -1,0 +1,20 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../M4-SAR/                   # dataset root dir
+train: optical/images/train        # train images (relative to 'path')
+val: optical/images/val            # val images (relative to 'path')
+test: optical/images/test          # test images (optional)
+train1: ../M4-SAR/sar/images/train # train images
+val1: ../M4-SAR/sar/images/val     # val images
+test1: ../M4-SAR/sar/images/test   # test images
+
+# Classes for DOTA 1.5
+names:
+  0: bridge
+  1: harbor
+  2: oil_tank
+  3: playground
+  4: airport
+  5: wind_turbine
+  

@@ -1,0 +1,85 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# YOLOv10 object detection model. For Usage examples see https://docs.ultralytics.com/tasks/detect
+
+# Parameters
+nc: 80 # number of classes
+scales: # model compound scaling constants, i.e. 'model=yolov10n.yaml' will call yolov10.yaml with scale 'n'
+  # [depth, width, max_channels]
+  s: [0.33, 0.50, 1024]
+
+backbone:
+  - [-1, 1, Silence, []]                         # 0
+  - [0, 1, FAM_OPT, []]                          # 1 OPT images
+  - [0, 1, FAM_SAR, []]                          # 2 SAR images
+
+# RGB and SAR backbone
+  # GPT Fusion one
+  - [1, 1, Conv, [64, 3, 2]]                     # 3-P1/2
+  - [-1, 1, Conv, [128, 3, 2]]                   # 4-P2/4
+  - [-1, 3, C2f, [128, True]]            # 5
+  - [-1, 1, Conv, [256, 3, 2]]                   # 6-P3/8
+  - [-1, 6, C2f, [256, True]]            # 7
+
+  - [2, 1, Conv, [64, 3, 2]]                     # 8-P1/2
+  - [-1, 1, Conv, [128, 3, 2]]                   # 9-P2/4
+  - [-1, 3, C2f, [128, True]]            # 10
+  - [-1, 1, Conv, [256, 3, 2]]                   # 11-P3/8
+  - [-1, 6, C2f, [256, True]]            # 12
+
+  - [[7, 12], 1, CMIM, [128, 16]]  # 13 [channel, sra, h, w, number]
+  - [[7, 13], 1, Add_GPT, [256, 0]]              # 14-P2/4 stream one:x + trans[0]
+  - [[12, 13], 1, Add_GPT, [256, 1]]             # 15-P2/4 stream two:x + trans[1]
+
+
+  # GPT Fusion two
+  - [14, 1, SCDown, [512, 3, 2]]                   # 16-P4/16
+  - [-1, 6, C2f, [512, True]]                   # 17
+
+  - [15, 1, SCDown, [512, 3, 2]]                   # 18-P4/16
+  - [-1, 6, C2f, [512, True]]                   # 19
+
+  - [[17, 19], 1, CMIM, [256, 16]] # 20
+  - [[17, 20], 1, Add_GPT, [512, 0]]             # 21-P4/16 stream one:x + trans[0]
+  - [[19, 20], 1, Add_GPT, [512, 1]]             # 22-P4/16 stream two:x + trans[1]
+
+
+  # GPT Fusion three
+  - [21, 1, SCDown, [1024, 3, 2]]                  # 23-P5/32
+  - [-1, 3, C2fCIB, [1024, True, True]]                  # 24
+  - [-1, 1, SPPF, [1024, 5]]                     # 25
+
+  - [22, 1, SCDown, [1024, 3, 2]]                  # 26-P5/32
+  - [-1, 3, C2fCIB, [1024, True, True]]                  # 27
+  - [-1, 1, SPPF, [1024, 5]]                     # 28
+
+  - [[25, 28], 1, CMIM, [512, 32]] # 29
+  - [[25, 29], 1, Add_GPT, [1024, 0]]            # 30-P5/32 stream one:x + trans[0]
+  - [[28, 29], 1, Add_GPT, [1024, 1]]            # 31-P5/32 stream two:x + trans[1]
+
+  # Add Block 
+  - [[14, 15], 1, AFM, [128]]                   # 32-P3/8  fusion backbone P3
+  - [[21, 22], 1, AFM, [256]]                   # 33-P4/16 fusion backbone P4
+  - [[30, 31], 1, AFM, [512]]                   # 34-P5/32 fusion backbone P5
+  - [-1, 1, PSA, [1024]]                       # 35
+
+
+# YOLO11n head
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 36
+  - [[-1, 33], 1, Concat, [1]]                   # 37 cat backbone P4
+  - [-1,  3, C2f, [512]]                  # 38
+
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 39
+  - [[-1, 32], 1, Concat, [1]]                   # 40 cat backbone P3
+  - [-1, 3, C2f, [256]]                  # 41 (P3/8-small)
+
+  - [-1, 1, Conv, [256, 3, 2]]                   # 42
+  - [[-1, 38], 1, Concat, [1]]                   # 43 cat head P4
+  - [-1, 3, C2f, [512]]                  # 44 (P4/16-medium)
+
+  - [-1, 1, Conv, [512, 3, 2]]                   # 45
+  - [[-1, 35], 1, Concat, [1]]                   # 46 cat head P5
+  - [-1, 3, C2fCIB, [1024, True, True]]                  # 47 (P5/32-large)
+
+  - [[41, 44, 47], 1, OBB, [nc, 1]]              # Detect (P3, P4, P5)
+

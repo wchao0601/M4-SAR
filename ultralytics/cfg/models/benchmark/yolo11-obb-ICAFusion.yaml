@@ -1,0 +1,69 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# YOLO11 Oriented Bounding Boxes (OBB) model with P3-P5 outputs. For Usage examples see https://docs.ultralytics.com/tasks/obb
+
+# ICAFusion: Iterative Cross-Attention Guided Feature Fusion for Multispectral Object Detection  PR 2024
+
+
+# Parameters
+nc: 6 # number of classes
+scales: # model compound scaling constants, i.e. 'model=yolo11n-obb.yaml' will call yolo11-obb.yaml with scale 'n'
+  # [depth, width, max_channels]
+  s: [0.50, 0.50, 1024] # summary: 344 layers, 9744931 parameters, 9744915 gradients, 22.7 GFLOPs
+
+# YOLO11n backbone
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Silence, []]                         # 0
+  - [0, 1, SilenceRGB, []]                       # 1 SAR images
+  - [0, 1, SilenceRadar, []]                     # 2 RGB images
+
+  # SAR backbone
+  - [1, 1, Conv, [64, 3, 2]]                     # 3-P1/2
+  - [-1, 1, Conv, [128, 3, 2]]                   # 4-P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]]            # 5
+  - [-1, 1, Conv, [256, 3, 2]]                   # 6-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]]            # 7
+  - [-1, 1, Conv, [512, 3, 2]]                   # 8-P4/16
+  - [-1, 2, C3k2, [512, True]]                   # 9
+  - [-1, 1, Conv, [1024, 3, 2]]                  # 10-P5/32
+  - [-1, 2, C3k2, [1024, True]]                  # 11
+  - [-1, 1, SPPF, [1024, 5]]                     # 12
+  - [-1, 2, C2PSA, [1024]]                       # 13
+  # RGB backbone
+  - [2, 1, Conv, [64, 3, 2]]                     # 14-P1/2
+  - [-1, 1, Conv, [128, 3, 2]]                   # 15-P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]]            # 16
+  - [-1, 1, Conv, [256, 3, 2]]                   # 17-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]]            # 18
+  - [-1, 1, Conv, [512, 3, 2]]                   # 19-P4/16
+  - [-1, 2, C3k2, [512, True]]                   # 20
+  - [-1, 1, Conv, [1024, 3, 2]]                  # 21-P5/32
+  - [-1, 2, C3k2, [1024, True]]                  # 22
+  - [-1, 1, SPPF, [1024, 5]]                     # 23
+  - [-1, 2, C2PSA, [1024]]                       # 24
+
+  # CSSA fusion
+  - [[7, 18], 1, ICAFusion, [256, 20, 20]]       # 25 P3
+  - [[9, 20], 1, ICAFusion, [512, 16, 16]]       # 26 P4
+  - [[13, 24], 1, ICAFusion, [1024, 8, 8]]     # 27 P5
+
+
+# YOLO11n head
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 28
+  - [[-1, 26], 1, Concat, [1]]                   # 29 cat backbone P4
+  - [-1, 2, C3k2, [512, False]]                  # 30
+
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]   # 31
+  - [[-1, 25], 1, Concat, [1]]                   # 32 cat backbone P3
+  - [-1, 2, C3k2, [256, False]]                  # 33 (P3/8-small)
+
+  - [-1, 1, Conv, [256, 3, 2]]                   # 34
+  - [[-1, 30], 1, Concat, [1]]                   # 35 cat head P4
+  - [-1, 2, C3k2, [512, False]]                  # 36 (P4/16-medium)
+
+  - [-1, 1, Conv, [512, 3, 2]]                   # 37
+  - [[-1, 27], 1, Concat, [1]]                   # 38 cat head P5
+  - [-1, 2, C3k2, [1024, True]]                  # 39 (P5/32-large)
+
+  - [[33, 36, 39], 1, OBB, [nc, 1]]              # Detect(P3, P4, P5)
