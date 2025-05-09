@@ -79,15 +79,15 @@ python gen-heatmap.py
 
 ## Results
 
-|  Model    |  size (pixels)  |  #Para(M)  |  Tra.Time (h)  |  Inf.Time (ms)  |  AP50 (%)  |  AP75 (%)  |  mAP (%)  |
-| :---: | :---:| :---: | :---: | :---: | :---: | :---: | :---: |
-|  [CFT](https://pan.baidu.com/s/1KjlbzaW_KcsyKyQ7ziUwDg?pwd=0601)       |  512 x 512  |  53.8  |  60.6  |  40.6    |  84.6   |  68.9   |  59.9    |
-|  [CLANet](https://pan.baidu.com/s/1xq7p5ujbRh86WaoxVnEIag?pwd=0601)    |  512 x 512  |  48.2  |  56.2  |  29.1    |  84.6   |  68.5   |  59.6    |
-|  [CSSA](https://pan.baidu.com/s/1M8atC_WC5IUsBEfoQanJ2g?pwd=0601)      |  512 x 512  |  13.5  |  25.7  |  12.3    |  83.4   |  66.4   |  58.0    |
-|  [CMADet](https://pan.baidu.com/s/1pnZoEzIbf9Z5KQnQbN4vXg?pwd=0601)    |  512 x 512  |  41.5  |  52.4  |  46.7    |  81.5   |  63.5   |  55.7    |
-|  [ICAFusion](https://pan.baidu.com/s/186bPEbk_BwvUXkZD_M1Y7Q?pwd=0601) |  512 x 512  |  29.0  |  47.7  |  23.6    |  84.5   |  67.3   |  58.8    |
-|  [MMIDet](https://pan.baidu.com/s/1iB3x_cmOHJFmSVB2zSUsBw?pwd=0601)    |  512 x 512  |  53.8  |  49.9  |  41.9    |  84.8   |  68.6   |  59.8    |
-|  [E2E-OSDet](https://pan.baidu.com/s/1GFUONCYPBntRg5_IpUqRYg?pwd=0601) |  512 x 512  |  27.5  |  42.1  |  20.9    |  85.7   |  70.3   |  61.4    |
+|  Model     |Weight Link |  size (pixels)  |  #Para(M)  |  Tra.Time (h)  |  Inf.Time (ms)  |  AP50 (%)  |  AP75 (%)  |  mAP (%)  |
+| :---:      | :---: | :---:| :---: | :---: | :---: | :---: | :---: | :---: |
+|  CFT       |[Download](https://pan.baidu.com/s/1KjlbzaW_KcsyKyQ7ziUwDg?pwd=0601)    |  512 x 512  |  53.8  |  60.6  |  40.6    |  84.6   |  68.9   |  59.9    |
+|  CLANet    |[Download](https://pan.baidu.com/s/1xq7p5ujbRh86WaoxVnEIag?pwd=0601)    |  512 x 512  |  48.2  |  56.2  |  29.1    |  84.6   |  68.5   |  59.6    |
+|  CSSA      |[Download](https://pan.baidu.com/s/1M8atC_WC5IUsBEfoQanJ2g?pwd=0601)    |  512 x 512  |  13.5  |  25.7  |  12.3    |  83.4   |  66.4   |  58.0    |
+|  CMADet    |[Download](https://pan.baidu.com/s/1pnZoEzIbf9Z5KQnQbN4vXg?pwd=0601)    |  512 x 512  |  41.5  |  52.4  |  46.7    |  81.5   |  63.5   |  55.7    |
+|  ICAFusion |[Download](https://pan.baidu.com/s/186bPEbk_BwvUXkZD_M1Y7Q?pwd=0601)    |  512 x 512  |  29.0  |  47.7  |  23.6    |  84.5   |  67.3   |  58.8    |
+|  MMIDet    |[Download](https://pan.baidu.com/s/1iB3x_cmOHJFmSVB2zSUsBw?pwd=0601)    |  512 x 512  |  53.8  |  49.9  |  41.9    |  84.8   |  68.6   |  59.8    |
+|  E2E-OSDet |[Download](https://pan.baidu.com/s/1GFUONCYPBntRg5_IpUqRYg?pwd=0601)    |  512 x 512  |  27.5  |  42.1  |  20.9    |  85.7   |  70.3   |  61.4    |
 
 
 ## Contact
