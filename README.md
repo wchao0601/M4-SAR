@@ -33,7 +33,7 @@ cd STTrack/mamba_install/causal-conv1d
 CAUSAL_CONV1D_FORCE_BUILD=TRUE pip install .
 cd ../selective_scan
 pip install .
-cd ../M4-SAR 
+cd M4-SAR/ 
 pip install -r requirements.txt
 ```
 
