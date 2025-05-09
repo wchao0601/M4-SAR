@@ -1,7 +1,7 @@
 <div align="center">
 <!-- <h1> M4-SAR </h1> -->
 <h3> <a href="url">M4-SAR: A Multi-Resolution, Multi-Polarization, Multi-Scene, Multi-Source Dataset and Benchmark for Optical-SAR Fusion Object Detection</h3>
-<h4> arXiv 2025</h4>
+<h4> 2025</h4>
 </div>
 
 ## **Examples of scenes and categories in the proposed M4-SAR dataset.**
