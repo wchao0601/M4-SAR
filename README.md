@@ -25,7 +25,7 @@ conda activate e2e-osdet
 ```
 Install the required packages:
 ```
-git clone https://github.com/xxx/M4-SAR.git
+git clone https://github.com/wchao0601/M4-SAR.git
 cd M4-SAR/
 pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
 pip install seaborn thop timm einops
