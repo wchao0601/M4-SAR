@@ -7,7 +7,7 @@
 ## **Examples of scenes and categories in the proposed M4-SAR dataset.**
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/motivation.png" width="90%"> </p>
 
-## **Statistical visualization of category attributes in the proposed M4-SAR dataset.**
+## **Statistical visualization of category attributes in M4-SAR dataset.**
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/data-statistics.png" width="90%"> </p>
 
 ## **Overall Framework.**
