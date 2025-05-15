@@ -91,7 +91,7 @@ python gen-heatmap.py
 
 
 ## Contact
-If you have any questions, please feel free to contact me via email at [***]
+If you have any questions, please feel free to contact me via email at [wchao0601@163.com]
 
 ## Acknowledgment
 - This repo is based on [Ultralytics](https://github.com/ultralytics/ultralytics), [CFT](https://github.com/DocF/multispectral-object-detection), [CLANet](https://github.com/hexiao0275/CALNet-Dronevehicle), [CSSA](https://github.com/artrela/mulitmodal-cssa), [CMADet](https://github.com/VDT-2048/DVTOD), [ICAFusion](https://github.com/chanchanchan97/ICAFusion) and [MMIDet](https://github.com/joewybean/MMI-Det) which are excellent works.
