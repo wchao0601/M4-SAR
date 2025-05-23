@@ -93,6 +93,17 @@ python gen-heatmap.py
 ## Contact
 If you have any questions, please feel free to contact me via email at wchao0601@163.com
 
+## Citation
+If our work is helpful, you can cite our paper:
+```
+@article{wang2025m4,
+  title={M4-SAR: A Multi-Resolution, Multi-Polarization, Multi-Scene, Multi-Source Dataset and Benchmark for Optical-SAR Fusion Object Detection},
+  author={Wang, Chao and Lu, Wei and Li, Xiang and Yang, Jian and Luo, Lei},
+  journal={arXiv preprint arXiv:2505.10931},
+  year={2025}
+}
+
+```
 ## Acknowledgment
 - This repo is based on [Ultralytics](https://github.com/ultralytics/ultralytics), [CFT](https://github.com/DocF/multispectral-object-detection), [CLANet](https://github.com/hexiao0275/CALNet-Dronevehicle), [CSSA](https://github.com/artrela/mulitmodal-cssa), [CMADet](https://github.com/VDT-2048/DVTOD), [ICAFusion](https://github.com/chanchanchan97/ICAFusion) and [MMIDet](https://github.com/joewybean/MMI-Det) which are excellent works.
 - We thank the [STTrack](https://github.com/NJU-PCALab/STTrack) and [YOLOv12](https://github.com/sunsmarterjie/yolov12) libraries, which help us to implement our ideas quickly.
