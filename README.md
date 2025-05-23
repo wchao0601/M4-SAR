@@ -48,32 +48,34 @@ pip install -r requirements.txt
 
 
 ### Single-GPU Train
-```
+```python
+# please set 'device=0' in train.py
 python train.py
 ```
 
 ### Multi-GPU Train
-```
+```python
+# please set 'device=[0,1]' in train.py
 python multigpu-train.py
 ```
 
 ### Test
-```
+```python
 python test.py
 ```
 
 ### Gen-Predict
-```
+```python
 python gen-predict-label.py
 ```
 
 ### Vis-Predict
-```
+```python
 python vis-predict-label.py
 ```
 
 ### Gen-Heatmap
-```
+```python
 python gen-heatmap.py
 ```
 
