@@ -37,11 +37,19 @@ cd M4-SAR/
 pip install -r requirements.txt
 ```
 
+### Optical and SAR Attributes by File Range
+
+| File Range        | Optical Image Resolution | SAR Image Polarization |
+|:---:|:---:|:---:|
+| 1.jpg ~ 56087.jpg      | 10 meters                | VH                     |
+| 56088.jpg ~ 112174.jpg | 60 meters           | VV                     |
+
+
 ### Data Preparation
 
 | Dataset | Link1 | Link2 | Link3 | SR & Pola. | Image Size | Category | Ins.num | Img.num |
 | :---: | :---: | :---: | :---: | :---:| :---: | :---: | :---: | :---: |
-| M4-SAR | [Kaggle](https://kaggle.com/datasets/a8ca500cbad658d8ae1af3d1f84566a5b4e94fe0ddb0be801c9e2f672db36a57)|[Baidu](https://pan.baidu.com/s/14iuaf_2ymzpP68EJY0dUyg?pwd=0601)|[Hug-Face](https://huggingface.co/datasets/wchao0601/m4-sar)|10M, 60M, VH, VV|512 x 512|6|981,862|112,184|
+| M4-SAR | [Kaggle](https://kaggle.com/datasets/a8ca500cbad658d8ae1af3d1f84566a5b4e94fe0ddb0be801c9e2f672db36a57)|[Baidu](https://pan.baidu.com/s/14iuaf_2ymzpP68EJY0dUyg?pwd=0601)|[Hug-Face](https://huggingface.co/datasets/wchao0601/m4-sar)|10M, 60M, VH, VV|512 x 512|6|981,862|112,174|
 
 ### Dataset and Label Structure
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/m4-sar-structure.png" width="90%"> </p>
