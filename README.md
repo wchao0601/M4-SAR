@@ -36,6 +36,7 @@ pip install .
 cd M4-SAR/ 
 pip install -r requirements.txt
 ```
+We provide a complete environment configuration [log](https://github.com/wchao0601/M4-SAR/blob/master/create-environment-log.docx) for your reference.
 
 ### Optical and SAR Attributes by File Range
 
