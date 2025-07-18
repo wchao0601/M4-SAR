@@ -100,7 +100,7 @@ python gen-heatmap.py
 |  MMIDet    |[Download](https://pan.baidu.com/s/1iB3x_cmOHJFmSVB2zSUsBw?pwd=0601)    |  512 x 512  |  53.8  |  49.9  |  41.9    |  84.8   |  68.6   |  59.8    |
 |  E2E-OSDet |[Download](https://pan.baidu.com/s/1GFUONCYPBntRg5_IpUqRYg?pwd=0601)    |  512 x 512  |  27.5  |  42.1  |  20.9    |  85.7   |  70.3   |  61.4    |
 
-### ALL weights
+### All weights
 [Google Drive](https://drive.google.com/file/d/1ZOGOBLtZEg1pQ_0SkqclgP5XXJsYUkU1/view?usp=sharing)
 
 ## Contact
