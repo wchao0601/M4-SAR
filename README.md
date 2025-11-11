@@ -74,8 +74,15 @@ python test.py
 ```
 
 ### Gen-Predict
+
 ```python
-python gen-predict-label.py
+Each time you need to generate labels, you need to do the following:
+1. Rename 'predictor.py' under M4-SAR/ultralytics/engine/ to 'predictor-train.py'
+2. Rename 'predictor-inf.py' under M4-SAR/ultralytics/engine/ to 'predictor.py'
+3. Execute python gen-predict-label.py
+4. After inference is complete.
+5. Rename 'predictor.py' under M4-SAR/ultralytics/engine/ to 'predictor-inf.py'
+6. Rename 'predictor-train.py' under M4-SAR/ultralytics/engine/ to 'predictor.py'
 ```
 
 ### Vis-Predict
