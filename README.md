@@ -13,8 +13,6 @@
 ## **Overall Framework.**
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/overall-network.png" width="90%"> </p>
 
-## **An example of annotation in our M4-SAR dataset**
-<p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/data-structure.png" width="90%"> </p>
 
 ## Usage
 ### Installation
@@ -53,7 +51,7 @@ We provide a complete environment configuration [log](https://github.com/wchao06
 | M4-SAR | [Kaggle](https://kaggle.com/datasets/a8ca500cbad658d8ae1af3d1f84566a5b4e94fe0ddb0be801c9e2f672db36a57)|[Baidu](https://pan.baidu.com/s/14iuaf_2ymzpP68EJY0dUyg?pwd=0601)|[Hug-Face](https://huggingface.co/datasets/wchao0601/m4-sar)|10M, 60M, VH, VV|512 x 512|6|981,862|112,174|
 
 ### Dataset and Label Structure
-<p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/m4-sar-structure.png" width="90%"> </p>
+<p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/data-structure.png" width="90%"> </p>
 
 
 ### Single-GPU Train
