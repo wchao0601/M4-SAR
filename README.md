@@ -14,7 +14,7 @@
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/overall-network.png" width="90%"> </p>
 
 ## **An example of annotation in our M4-SAR dataset**
-<p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/FAM-CMIM-AFM.png" width="90%"> </p>
+<p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/data-structure.png" width="90%"> </p>
 
 ## Usage
 ### Installation
