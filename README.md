@@ -13,7 +13,7 @@
 ## **Overall Framework.**
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/overall-network.png" width="90%"> </p>
 
-## **Architectural details of the proposed FAM, CMIM, and AFM modules.**
+## **An example of annotation in our M4-SAR dataset**
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/FAM-CMIM-AFM.png" width="90%"> </p>
 
 ## Usage
