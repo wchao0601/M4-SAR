@@ -1,8 +1,13 @@
 <div align="center">
 <!-- <h1> M4-SAR </h1> -->
 <h3> <a href="https://arxiv.org/abs/2505.10931">M4-SAR: A Multi-Resolution, Multi-Polarization, Multi-Scene, Multi-Source Dataset and Benchmark for Optical-SAR Object Detection</h3>
-<h4> 2025</h4>
+<h4> Chao Wang, Wei Lu, Xiang Li, Jian Yang, Lei Luo</h4>
 </div>
+
+
+## News
+- **2026.06.18** Congratulations! Our paper "M4-SAR: A Multi-Resolution, Multi-Polarization, Multi-Scene, Multi-Source Dataset and Benchmark for Optical-SAR Object Detection" has been accepted by **ECCV 2026**. 🔥
+
 
 ## **Examples of scenes and categories in the proposed M4-SAR dataset.**
 <p align="center"> <img src="https://github.com/wchao0601/M4-SAR/blob/master/img/motivation.png" width="90%"> </p>
