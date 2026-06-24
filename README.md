@@ -126,6 +126,21 @@ If our work is helpful, you can cite our paper:
   year={2025}
 }
 
+@article{wang2025msod,
+  title={MSOD: A Large-Scale Multi-Scene Dataset and a Novel Diagonal-Geometry Loss for SAR Object Detection},
+  author={Wang, Chao and Fang, Wenxuan and Li, Xiang and Yang, Jian and Luo, Lei},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  year={2025},
+  publisher={IEEE}
+}
+
+@article{wang2026localized,
+  title={Localized Background-aware Generative Distillation for Enhanced Remote Sensing Object Detection},
+  author={Wang, Chao and Sun, Yanguang and Yang, Jian and Luo, Lei},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2026},
+  publisher={IEEE}
+}
 ```
 ## Acknowledgment
 - This repo is based on [Ultralytics](https://github.com/ultralytics/ultralytics), [CFT](https://github.com/DocF/multispectral-object-detection), [CLANet](https://github.com/hexiao0275/CALNet-Dronevehicle), [CSSA](https://github.com/artrela/mulitmodal-cssa), [CMADet](https://github.com/VDT-2048/DVTOD), [ICAFusion](https://github.com/chanchanchan97/ICAFusion) and [MMIDet](https://github.com/joewybean/MMI-Det) which are excellent works.
