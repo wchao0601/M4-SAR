@@ -8,7 +8,8 @@ scales: # model compound scaling constants, i.e. 'model=yolo11n-obb.yaml' will c
   # [depth, width, max_channels]
   s: [0.50, 0.50, 1024] # summary: 344 layers, 9744931 parameters, 9744915 gradients, 22.7 GFLOPs
 
-
+ch: 6
+imgsz: 512
 # YOLO11n backbone
 backbone:
   # [from, repeats, module, args]
