@@ -6,7 +6,7 @@
 
 
 ## News
-- **2026.06.18** Congratulations! Our paper "M4-SAR: A Multi-Resolution, Multi-Polarization, Multi-Scene, Multi-Source Dataset and Benchmark for Optical-SAR Object Detection" has been accepted by **ECCV 2026**. 🔥
+- **2026.06.18** Congratulations! Our paper "M4-SAR: A Multi-Resolution, Multi-Polarization, Multi-Scene, Multi-Source Dataset and Benchmark for Optical-SAR Object Detection" has been accepted by **ECCV 2026 (Poster)**. 🔥
 
 
 ## **Examples of scenes and categories in the proposed M4-SAR dataset.**
